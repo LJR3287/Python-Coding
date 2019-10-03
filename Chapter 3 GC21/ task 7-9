@@ -1,0 +1,20 @@
+#task 7
+import turtle
+tess = turtle.Turtle()
+angle = 0
+xs = [160, -43, 270, -97, -43, 200, -940, 17, -86]
+tess.setposition(0,0)
+for i in range(9):
+    angle += (xs[i])
+    tess._rotate(xs[i])
+    tess.forward(100)
+
+
+
+#task 8
+
+print("The drunk pirate went to", angle)
+
+#task 9
+
+print(360/18)

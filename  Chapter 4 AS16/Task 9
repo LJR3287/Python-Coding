@@ -1,0 +1,18 @@
+import turtle
+
+wn=turtle.Screen()
+alex=turtle.Turtle()
+alex.reset()
+
+alex.width(2)
+
+def draw_star(l, sz):
+    for i in range(5):
+        l.forward(sz)
+        l.right(144)
+
+draw_star(alex, 100)
+alex.hideturtle()
+input("Wait")
+
+wn.mainloop()

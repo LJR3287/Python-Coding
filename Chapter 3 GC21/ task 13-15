@@ -1,0 +1,11 @@
+#task 13
+import turtle
+tess = turtle.Turtle()
+tess.shape("turtle")
+print("For the type, I received a turtle")
+
+#task 14
+print("Turtles come in nests and bales")
+
+#task 15
+print("Pythons come in pits, nests and slithers")

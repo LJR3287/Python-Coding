@@ -1,0 +1,21 @@
+import turtle
+
+wn=turtle.Screen()
+alex=turtle.Turtle()
+alex.reset()
+alex.right(90)
+
+wn.bgcolor("lightgreen")
+alex.color("blue")
+alex.width(2)
+
+def DrawSide(t, angle, sz):
+    t.pendown()
+    t.forward(sz*3)
+    t.right(angle)
+
+for j in range(95):
+    DrawSide(alex, 90, j+2)
+
+
+input("Wait")

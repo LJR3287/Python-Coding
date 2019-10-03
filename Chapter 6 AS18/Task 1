@@ -1,0 +1,2 @@
+test(turn_clockwise("N") == "E")
+test(turn_clockwise("W") == "N")

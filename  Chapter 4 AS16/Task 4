@@ -1,0 +1,32 @@
+import turtle
+
+wn=turtle.Screen()
+alex=turtle.Turtle()
+wn.bgcolor("lightgreen")
+
+alex.color("blue")
+alex.width(3)
+
+def GotOrigin(t):
+    t.penup()
+    t.goto(0,0)
+    t.DEFAULT_ANGLEORIENT
+
+
+def Drawsquare(t, angle):
+    t.pendown()
+    t.left(angle)
+    for j in range(4):
+        for i in range(4):
+            t.forward(100)
+            t.left(90)
+        t.left(90)
+
+for k in range(5):
+    GotOrigin(alex)
+    Drawsquare(alex, 18)
+
+
+input("Wait")
+
+wn.mainloop()

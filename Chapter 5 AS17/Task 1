@@ -1,0 +1,12 @@
+Sun = "Sunday"
+Mon = "Monday"
+Tue = "Tuesday"
+Wed = "Wednesday"
+Thur = "Thursday"
+Fri = "Friday"
+Sat = "Saturday"
+
+Daynumber = input("Enter day number")
+Dayname = 
+
+print("Day number = ", Daynumber,  "Day name =", Dayname)

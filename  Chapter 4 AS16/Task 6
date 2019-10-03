@@ -1,0 +1,19 @@
+import turtle
+
+def draw_equitriangle(t, sz):
+     for i in range(3):
+         t.color("hotpink")
+         t.width(3)
+         t.forward(sz)
+         t.left(360/3)
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()
+tess.reset()
+draw_equitriangle(t=tess, sz=50)
+
+input("Wait")
+
+wn.mainloop()

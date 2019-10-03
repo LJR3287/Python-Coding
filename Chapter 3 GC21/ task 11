@@ -1,0 +1,8 @@
+#task 11
+import turtle
+tess = turtle.Turtle()
+tess.setposition(0,0)
+tess._rotate(36)
+for i in range(5):
+    tess._rotate(144)
+    tess.forward(200)

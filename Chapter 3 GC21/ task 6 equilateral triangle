@@ -1,0 +1,10 @@
+#task 6
+import turtle
+
+tess = turtle.Turtle()
+tess.setposition(0,0)
+for i in range(120,361,120):
+            tess._rotate(120)
+            tess.forward(100)
+
+input("Wait")

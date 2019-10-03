@@ -1,0 +1,25 @@
+#task 12
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+tess = turtle.Turtle()
+tess.shape("turtle")
+tess.color("blue")
+
+
+
+tess.pensize(5)
+tess.stamp()
+
+for i in range(12):
+ tess.penup()
+ tess.forward(110)
+ tess.pendown()
+ tess.forward(15)
+ tess.penup()
+ tess.forward(30)
+ tess.stamp()
+ tess.setposition(0,0)
+
+ tess._rotate(30)
+ tess.hideturtle()

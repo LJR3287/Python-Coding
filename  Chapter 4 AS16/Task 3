@@ -1,0 +1,19 @@
+import turtle
+
+def draw_poly(t, n, sz):
+     for i in range(n):
+         t.color("hotpink")
+         t.width(3)
+         t.forward(sz)
+         t.left(360/n)
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()
+tess.reset()
+draw_poly(t=tess,n=8,sz=50)
+
+input("Wait")
+
+wn.mainloop()

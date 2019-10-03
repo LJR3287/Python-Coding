@@ -1,0 +1,14 @@
+#task 10
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+tess.right(90)
+tess.left(3600)
+tess.right(-90)
+tess.speed(10)
+tess.left(3600)
+tess.speed(0)
+tess.left(3645)
+tess.forward(-100)
+
+print("It turn 90 degree clockwise\n then rotate 10 times clockwise\n then rotate 90 degree anticlockwise\n then speed increase by 10\n then rotate 10 times clockwise\n then speed does not change\n then rotates 10 and 1 quarter clockwise\n then reverse 100") 

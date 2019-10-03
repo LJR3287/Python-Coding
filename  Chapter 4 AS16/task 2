@@ -1,0 +1,31 @@
+import turtle
+
+def draw_square(t, sz):
+     for i in range(4):
+         t.color("hotpink")
+         t.width(3)
+         t.forward(sz)
+         t.left(90)
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+thunder = turtle.Turtle()
+
+
+
+for i in range(5):
+    draw_square(thunder,sz=(i+1)*20)
+    thunder._rotate(-135)
+    thunder.penup()
+    thunder.forward(14)
+    thunder._rotate(135)
+    thunder.pendown()
+
+
+
+
+
+input("Wait")
+
+wn.mainloop()
