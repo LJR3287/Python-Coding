@@ -1,1 +1,5 @@
+a = input('Enter side 1')
+b = input('Enter side 2')
+c = (a*a + b*b) ** 0.5
 
+print("Length of hypo =", c)
