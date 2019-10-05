@@ -1,1 +1,20 @@
+def Grade(Mark):
+    if Mark >= 75:
+        return 'First'
+    if Mark >= 70 and Mark <75:
+        return 'Upper Second'
+    if Mark >= 60 and Mark <70:
+        return 'Second'
+    if Mark >= 50 and Mark <60:
+        return 'Third'
+    if Mark >= 45 and Mark <50:
+        return 'F1 Supp'
+    if Mark >= 40 and Mark <45:
+        return 'F2'
+    if Mark < 40:
+        return 'F3'
+xs = [83, 75, 74.9, 70, 69.9, 65, 60, 59.9, 55, 50,
+                     49.9, 45, 44.9, 40, 39.9, 2, 0]
 
+for i in range(17):
+    print("Mark =", xs[i], "Grade =", Grade(xs[i]))
