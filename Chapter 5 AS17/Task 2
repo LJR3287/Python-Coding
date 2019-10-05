@@ -1,1 +1,9 @@
+def Dayname(Daynumber):
+    days = ['Sunday','Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    return days[Daynumber]
 
+Today = input("Enter day for today (e.g. 3 for wednesday)")
+Numberofdays = input("How many days later?")
+Remainder = int(Numberofdays %7)
+
+print('The day later is', Dayname((int(Today)+Remainder)%7))
