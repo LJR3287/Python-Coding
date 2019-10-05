@@ -1,12 +1,8 @@
-Sun = "Sunday"
-Mon = "Monday"
-Tue = "Tuesday"
-Wed = "Wednesday"
-Thur = "Thursday"
-Fri = "Friday"
-Sat = "Saturday"
+def Dayname(Daynumber):
+    days = ['Sunday','Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    return days[Daynumber]
 
-Daynumber = input("Enter day number")
-Dayname = 
 
-print("Day number = ", Daynumber,  "Day name =", Dayname)
+Whichday = input("Enter day number")
+
+print("Day number = ", Whichday),  "Day name =", Dayname(int(Whichday))
