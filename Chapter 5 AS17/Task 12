@@ -1,1 +1,40 @@
+def is_rightangled(a, b, c):
+    big = 0
+    which = 0
+    if big < a:
+        big = a
+        which = 0
+    if big < b:
+        big = b
+        which = 1
+    if big < c:
+        big = c
+        which = 2
+    #print (which, big)
+    if which == 2:
+        if (a*a + b*b) == c*c:
+           return True
+        else:
+           return False
+    if which == 1:
+        if (a*a + c*c) == b*b:
+           return True
+        else:
+           return False
+    if which == 0:
+        if (c*c + b*b) == a*a:
+           return True
+        else:
+           return False
 
+
+
+a = input("Enter side 1")
+b = input("Enter side 2")
+c = input("Enter side 3")
+
+if is_rightangled(a, b, c):
+    print(a, b, c, "is a right angled triangle")
+
+else:
+    print(a, b, c, "is not a right angled triangle")
