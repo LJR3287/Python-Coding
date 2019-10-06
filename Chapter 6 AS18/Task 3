@@ -1,1 +1,15 @@
-
+def day_name(day_name):
+    days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    InList=99 #Name not found
+    for i in range (7):
+        if day_name==days[i]: #exit when name found
+           InList=i
+           exit
+    print(InList)
+    if InList<7:
+       return InList
+    else:
+         return "None"
+         
+Which_name=input("Enter day name:")
+print("The day num is :", day_num(Which_name))
