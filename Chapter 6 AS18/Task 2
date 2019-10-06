@@ -1,1 +1,9 @@
-
+def day_name(day_num):
+    days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    if day_num<7:
+        return days[day_num]
+    else:
+         return "None"
+         
+Which_day=int(input("Enter day num:"))
+print("The day name is :", day_name(Which_day))
