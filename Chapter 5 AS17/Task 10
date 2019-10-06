@@ -1,5 +1,8 @@
+def find_hypot(a, b):
+       c = (a*a + b*b) ** 0.5
+       return c
 a = input('Enter side 1')
 b = input('Enter side 2')
-c = (a*a + b*b) ** 0.5
+c = find_hypot(a, b)
 
 print("Length of hypo =", c)
