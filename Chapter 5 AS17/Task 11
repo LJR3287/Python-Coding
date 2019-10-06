@@ -1,1 +1,16 @@
+def is_rightangled(a, b, c):
+    if a*a + b*b == c*c:
+        return True
+    else:
+        return False
 
+
+a = input("Enter side 1")
+b = input("Enter side 2")
+c = input("Enter side 3")
+
+if is_rightangled(a, b, c):
+    print(a, b, c, "is a right angled triangle")
+
+else:
+    print(a, b, c, "is not a right angled triangle")
