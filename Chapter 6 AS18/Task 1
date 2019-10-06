@@ -1,2 +1,14 @@
-test(turn_clockwise("N") == "E")
-test(turn_clockwise("W") == "N")
+def turn_clockwise(compass_point):
+    if compass_point == 'N':
+        return 'E'
+    if compass_point == 'E':
+        return 'S'
+    if compass_point == 'S':
+        return 'W'
+    if compass_point == 'W':
+        return 'N'
+    else:
+         return 'None'
+         
+str=input("Enter compass point:")
+print('The next compass point is:', turn_clockwise(str)
