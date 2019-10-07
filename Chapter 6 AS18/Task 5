@@ -1,1 +1,33 @@
+def day_num(day_name):
+    days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    InList=99
+    for i in range(7):
+        if day_name==days[i]:
+           InList=i
+           exit
+    if InList<7:
+       return InList
+    else:
+         return "None"
 
+def which_day(current, next):
+    remainder=next % 7
+    return (current + remainder) % 7
+
+def day_name(day_num):
+    days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    if day_num<7:
+       return days[day_num]
+    else:
+         return "None"
+         
+Which_bame=input("Enter day name:")
+No_of_days=int(input("No of days:"))
+
+current_day=day_num(Which_name)
+day_to_find=which_day(current_day, No_of_days)
+
+Before_after="after"
+if No_of_days<0:
+    Before_after="before"
+print(No_of_days, "days", Before_After, Which_name, "is", day_name(day_to_find)
