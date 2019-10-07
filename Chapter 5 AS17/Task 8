@@ -1,1 +1,65 @@
+import turtle
+def draw_bar(t, height):
+    """ Get turtle t to draw one bar, of height. """
 
+    balance=height
+    part=[0,0,0]
+    for i in range (3):     # find size of each part
+        balance-=100
+        if balance>0:
+            part[i]=100
+        else:
+            part[i]=balance+100
+            break
+            
+#   print(height, part[0], part[1], part[2])
+#   eg:   height=222  part=[100,100,22]
+
+    t.left(90)
+    bar_colour=["green","yellow","red"]
+
+    for i in range (3):
+        if part[i]==0:   # no need to do if size = 0
+            break
+        t.color("blue", bar_colour[i]) # set bar colour
+        t.begin_fill()
+        t.forward(part[i])
+        t.right(90)
+        t.forward(40)
+        t.right(90)
+        t.forward(part[i])
+        t.end_fill()
+
+        t.right(90)         # go to upper left corner to draw next part
+        t.forward(40)
+        t.right(90)
+        t.forward(part[i])
+        
+    t.write("  "+ str(height))
+
+    t.right(90)             # complete filling, go bottom right for next bar
+    t.forward(40)           
+    t.right(90)
+    t.forward(height)
+
+    t.left(90)
+    t.penup()
+    t.forward(10)
+    t.pendown()
+
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+tess = turtle.Turtle()       # Create tess and set some attributes
+tess.pensize(3)
+
+tess.penup()
+tess.goto(-200,-50)
+tess.pendown()
+
+xs = [48,117,200,240,160,260,220]
+
+for a in xs:
+    draw_bar(tess, a)
+
+wn.mainloop()
