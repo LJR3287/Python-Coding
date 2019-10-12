@@ -1,1 +1,12 @@
+def is_factor(a, b):
+    remainder = b % a      # take note of the order!
+    return remainder==0
 
+
+a=int(input("Enter first number "))
+b=int(input("Enter second number "))
+
+if is_factor(a,b):
+    print( a, " is a factor of ", b)
+else:
+    print( a, " is not a factor of ", b)
