@@ -1,1 +1,21 @@
+def hours_in(no_of_secs):
+    no_of_hours=int(no_of_secs/3600)
+    return int(no_of_hours)
 
+def mins_in(no_of_secs):
+    no_of_hours=int(no_of_secs/3600)
+    no_of_mins=(no_of_secs - no_of_hours*3600)/60 
+    
+    return int(no_of_mins)
+
+def secs_in(no_of_secs):
+    no_of_hours=int(no_of_secs/3600)  # note all the int() used!
+    no_of_mins=int((no_of_secs - no_of_hours*3600)/60) # do the same like in mins
+    secs_left=no_of_secs - no_of_hours*3600 - no_of_mins*60  
+    return int(secs_left)
+
+total_secs=int(input("Enter no of secs: "))
+
+print ("Hours in = (",total_secs,')', hours_in(total_secs))
+print ("Mins  in = (",total_secs,')', mins_in(total_secs))
+print ("Secs  in = (",total_secs,')', secs_in(total_secs))
