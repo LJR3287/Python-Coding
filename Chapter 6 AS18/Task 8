@@ -1,1 +1,9 @@
+def to_secs(hours, mins, secs):
+    no_of_secs=hours*3600+mins*60+secs
+    return int(no_of_secs)
 
+hh=float(input("Enter no of hours: "))
+mm=float(input("Enter no of mins: "))
+ss=float(input("Enter no of secs: "))
+
+print ("Converted to no. of secs = ", to_secs(hh,mm,ss))
