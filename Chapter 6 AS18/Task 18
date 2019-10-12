@@ -1,0 +1,12 @@
+def f2c(t):
+# formula  c = ( f -32 ) x 5 / 9
+   c = round((t -32)*5/9)
+   return c
+
+print ("F=212", "C=",f2c(212))
+print ("F=32",  "C=",f2c(32))
+print ("F=-40", "C=",f2c(-40))
+print ("F=36", "C=",f2c(36))
+print ("F=37", "C=",f2c(37))
+print ("F=38", "C=",f2c(38))
+print ("F=39", "C=",f2c(39))
