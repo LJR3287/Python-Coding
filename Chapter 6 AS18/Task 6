@@ -1,1 +1,16 @@
+def days_in_month(month):
+    Month_Name=["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+    Days_in_month=[31,28,31,30,31,30,31,31,30,31,30,31]
+    InList=99
+    for i in range (12):
+        if month == Month_Name[i]:
+            InList=i
+            exit
+    if InList<12:
+        return Days_in_month[InList]
+    else:
+        return 0  # for months not in the list
+
+Which_month=input("Enter month")
+print(days_in_month(Which_month))
