@@ -1,0 +1,13 @@
+def is_factor(a, b):
+    remainder = b % a      # take note of the order!
+    return remainder==0
+
+def is_multiple(a, b):
+    remainder = a % b      # note the order is the other way
+    return remainder==0
+
+print (12, 3, is_multiple(12,3))
+print (12, 4, is_multiple(12,4))
+print (12, 5, not is_multiple(12,5))
+print (12, 6, is_multiple(12,6))
+print (12, 7, not is_multiple(12,7))
