@@ -1,1 +1,14 @@
+print (3 % 4 == 3)
+print (3 / 4 == 0)
+print (3 // 4 == 0)
+print (3+4  *  2 == 14)
+print (4-2+2 == 0)
+print (len("hello, world!") == 13)
 
+# Output:
+#  True    3 modulo 4 is 3, so is correct
+#  False   3/4 is 0.75, convert to integer is 0
+#  True    Answer 0 is correct
+#  False   Multiplication done first, answer is 11
+#  False   Evalution done left to right, answer is 4
+#  True    The len is 13
