@@ -1,1 +1,10 @@
+def is_prime(n):
+    prime=True
+    for i in range(n-2):
+        #print (i+2)
+        if n%(i+2) == 0:
+             prime = False
+             break
+    return prime
 
+print(12, is_prime(12))
