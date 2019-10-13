@@ -1,1 +1,15 @@
+def Find(list):
+    found=False
+    count = 0
+    for i in range(len(list)):
+        count += 1
+        if list[i]=='Sam':
+            found=True
+            break
+        
+    return(count)
 
+
+list = ['John', 'Smith', 'Sam', 'Doe', 'Wayne']
+print(list)
+print("How many words occur in a list up to and including the first occurrence of the word sam  =", Find(list))
