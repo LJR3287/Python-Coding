@@ -1,5 +1,10 @@
-for i in [12, 16, 17, 24, 29]:
-    if i % 2 == 1:  # If the number is odd
-       break        #  ... immediately exit the loop
-    print(i)
-print("done")
+def nOdd(list):
+    count=0
+    for i in range(len(list)):
+        if list[i]%2!=0:
+            count+=1
+    return(count)
+
+list = [1,2,3,4,5,6,7,8,9,10,11,12]
+print(list)
+print("Number of odd numbers =", nOdd(list))
