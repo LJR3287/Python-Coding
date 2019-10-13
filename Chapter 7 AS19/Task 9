@@ -1,1 +1,8 @@
+def print_triangular_numbers(n):
+    k=0
+    for i in range(n):
+        j = i+1
+        k = k+j
+        print(j, k)
 
+print_triangular_numbers(5)
