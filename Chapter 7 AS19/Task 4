@@ -1,1 +1,10 @@
+def Totallen(list, l):
+    count=0
+    for i in range(len(list)):
+        if len(list[i])==l:
+            count+=1
+    return(count)
 
+list = ['Apple', 'Orange', 'Grape', 'Banana', 'Durian']
+print(list)
+print("Amount of words with length of 5 =", Totallen(list, 5))
