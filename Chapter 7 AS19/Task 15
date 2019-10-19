@@ -1,1 +1,17 @@
+def num_even_digits(n):
+    count = 0
 
+    n=abs(n)             # if n is negative, change to positive
+    if (n==0): return 1  # correct the n=0 problem, return straight
+
+    while n != 0:
+        if n%2 == 0:  
+            count = count + 1
+        n = n // 10
+#        print (n, count)
+    return count
+
+print ("num_even_digits(123456)", num_even_digits(123456))
+print ("num_even_digits(2468)", num_even_digits(2468))
+print ("num_even_digits(1357)", num_even_digits(1357))
+print ("num_even_digits(0)", num_even_digits(0))
