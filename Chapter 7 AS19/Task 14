@@ -1,1 +1,15 @@
+def num_digits(n):
+    count = 0
 
+    n=abs(n)             # if n is negative, change to positive
+    if (n==0): return 1  # correct the n=0 problem
+
+    while n != 0:
+        count = count + 1
+        n = n // 10
+#        print (n)
+    return count
+
+print ("num_digits(0)", num_digits(0))
+print ("num_digits(-24)", num_digits(-24))
+print ("num_digits(12345)", num_digits(12345))
