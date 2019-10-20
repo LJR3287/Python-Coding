@@ -1,1 +1,11 @@
+def count_letters(fruit, char):
 
+    count = 0
+    for i in range (len(fruit)):
+        if fruit.find(char, i, i+1) != -1:
+            count += 1
+
+    return(count)
+
+fruit = "banana"
+print(count_letters(fruit, "a"))
