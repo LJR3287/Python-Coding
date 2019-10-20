@@ -1,1 +1,10 @@
+def count_letters(fruit, char):
+    print(fruit, char)
+    count = 0
+    for ch in fruit:
+        if ch == char:
+           count += 1
+    return(count)
 
+fruit = "banana"
+print(count_letters(fruit, "a"))
