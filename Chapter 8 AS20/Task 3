@@ -1,5 +1,5 @@
 def count_letters(fruit, char):
-    print(fruit, char)
+    
     count = 0
     for ch in fruit:
         if ch == char:
