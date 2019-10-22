@@ -1,1 +1,53 @@
+# Your friend will complete this function
+def play_once(human_plays_first):
+    """
+       Must play one round of the game. If the parameter
+       is True, the human gets to play first, else the
+       computer gets to play first.  When the round ends,
+       the return value of the function is one of
+       -1 (human wins),  0 (game drawn),   1 (computer wins).
+    """
+    # This is all dummy scaffolding code right at the moment...
+    import random                  # See Modules chapter ...
+    rng = random.Random()
+    # Pick a random result between -1 and 1.
+    result = rng.randrange(-1,2)
+    print("Human plays first={0},  winner={1} "
+                       .format(human_plays_first, result))
+    return result
 
+nNoOfGamesPlayed=0
+PlayAgain="y"
+nPlayerWin=0
+nComputerWin=0
+nDraw=0
+
+
+while PlayAgain=="y":
+
+    WhoPlays= nNoOfGamesPlayed%2 == 0  #alternate betwwen Player and Computer
+
+    WhoWins=play_once(WhoPlays)
+    if WhoWins==-1: # human wins   # update and keep scores
+        nPlayerWin+=1
+        print("Player Wins")
+    if WhoWins==0: # draw
+        nDraw+=1
+        print("Game Drawn")
+    if WhoWins==+1: # human wins
+        nComputerWin+=1
+        print("Computer Wins")
+        
+    nNoOfGamesPlayed+=1
+
+    # Annouce at end of the round
+    print ("Scores: Player=",nPlayerWin, "Computer=",nComputerWin, "Draw=",nDraw)
+    print ("Percentage: Player=",round(nPlayerWin*100/nNoOfGamesPlayed),"%",
+           "Computer=",round(nComputerWin*100/nNoOfGamesPlayed),"%",
+           "Draw=",round(nDraw*100/nNoOfGamesPlayed),"%", "\n")
+    
+
+    PlayAgain=input("Do you want to play again? (y/n)")
+    if PlayAgain!="y":
+        print("Goodbye")
+        print("No of Games played=", nNoOfGamesPlayed)
