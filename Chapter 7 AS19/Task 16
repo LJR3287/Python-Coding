@@ -1,1 +1,14 @@
+def sum_of_squares(list):
+    sum = 0
 
+    for i in range (len(list)):
+        sum+=list[i]*list[i]        
+#        print (i, sum)
+    return sum
+
+list=[2,3,4]
+print (list, "sum_of_squares=", sum_of_squares(list))
+list=[]
+print (list, "sum_of_squares=", sum_of_squares(list))
+list=[2,-3,4]
+print (list, "sum_of_squares=", sum_of_squares(list))
