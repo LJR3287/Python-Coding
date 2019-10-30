@@ -1,1 +1,40 @@
+def count_letters(letter, char):
+    count = 0
+    for i in range (len(letter)):
+        if letter.find(char, i, i+1) != -1:
+            count += 1
 
+    return(count)
+
+def remove_punc(in_text):
+    out_text = ""
+    punc = ["'", ",", "."]
+    for i in range (len(in_text)):
+        ch=in_text[i]
+        for j in range (len(punc)):
+            if ch == punc[j]:
+                ch = ""
+        out_text+=ch
+    return out_text
+
+def seperate(in_text1):
+    out_text1=""
+    out_text1=in_text1.rsplit(" ")
+    return out_text1
+
+text="You've been tricked by that charlatan, Dick Grayson. He gives costumes to foolish kids, making them believe they're heroes, leading them like lambs to the slaughter. I told him if he ever put the Titans back together, I'd kill every last one of them. And you're about to learn... I'm a man of my word."
+text1=remove_punc(text)
+text2=seperate(text1)
+print (text)
+#print (text1)
+#print (text2)
+
+no_of_words=len(text2)
+no_contain_e=0
+for k in range (no_of_words):
+    if int(count_letters(text2[k], "e"))>0:
+        no_contain_e+=1
+#    print (text2[k], count_letters(text2[k], "e"))
+
+
+print ('Your text contains {0} words, of which {1}({2:.1f}%) contains an "e".'.format(no_of_words,no_contain_e,no_contain_e*100/no_of_words))
