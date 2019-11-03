@@ -1,1 +1,30 @@
+def remove(substr, in_str):
+    sub_len=len(substr)
+    left_str=in_str
+    right_str=""
+    number=0
+    
+    for i in range (0, len(in_str)-sub_len+1):
+        temp=""
+        for j in range (0, sub_len):
+            temp+=in_str[i+j]
+#       print (temp,end="")
+#       print ( )
+        if temp==substr:
+            left_str=in_str[0:i]
+            right_str=in_str[i+sub_len:len(in_str)]
+            break
 
+    return left_str+right_str # return string with substr remove
+
+def remove_all(substr, in_str):
+    final_str=remove(substr, in_str)
+    while in_str!=final_str:
+        in_str=final_str
+        final_str=remove(substr, in_str)
+    return final_str
+
+print( 'remove_all("an", "banana") == ', remove_all("an", "banana"))
+print( 'remove_all("cyc", "bicycle") == ', remove_all("cyc", "bicycle"))
+print( 'remove_all("iss", "Mississippi") == ', remove_all("iss", "Mississippi"))
+print( 'remove_all("eggs", "bicycle") == ', remove_all("eggs", "bicycle"))
