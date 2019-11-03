@@ -1,6 +1,15 @@
-test(remove_letter("a", "apple") == "pple")
-test(remove_letter("a", "banana") == "bnn")
-test(remove_letter("z", "banana") == "banana")
-test(remove_letter("i", "Mississippi") == "Msssspp")
-test(remove_letter("b", "") = "")
-test(remove_letter("b", "c") = "c")
+def remove_letter(let, in_str):
+    out_str=""
+    i=0
+    while i<len(in_str):
+        if in_str[i]!=let:
+            out_str+=in_str[i]
+        i+=1
+    return out_str
+
+print ("a", "apple", remove_letter("a", "apple"))
+print ("a", "banan", remove_letter("a", "banana"))
+print ("z", "banana", remove_letter("z", "banana"))
+print ("i", "Mississippi", remove_letter("i", "Mississippi"))
+print ("b", "", remove_letter("b", ""))
+print ("b", "c", remove_letter("b", "c"))
