@@ -1,1 +1,20 @@
+def count(substr, in_str):
+    sub_len=len(substr)
+    number=0
+    
+    for i in range (0, len(in_str)-sub_len+1):
+        temp=""
+        for j in range (0, sub_len):
+            temp+=in_str[i+j]
+#       print (temp,end="")
+#       print ( )
+        if temp==substr:
+            number+=1
+    return number
 
+print( 'count("is",   "Mississippi") == ', count("is", "Mississippi"))
+print( 'count("an",   "banana")      == ', count("an", "banana"))
+print( 'count("ana",  "banana")      == ', count("ana","banana"))
+print( 'count("nana", "banana")      == ', count("nana","banana"))
+print( 'count("nanan","banana")      == ', count("nanan","Mississippi"))
+print( 'count("aaa",  "aaaaaa")      == ', count("aaa", "aaaaaa"))
