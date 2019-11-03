@@ -1,7 +1,19 @@
-test(is_palindrome("abba"))
-test(not is_palindrome("abab"))
-test(is_palindrome("tenet"))
-test(not is_palindrome("banana"))
-test(is_palindrome("straw warts"))
-test(is_palindrome("a"))
-# test(is_palindrome(""))    # Is an empty string a palindrome
+def reverse(in_str):
+    out_str=""
+    i=len(in_str)-1
+    while i>=0:
+        out_str+=in_str[i]
+        i-=1
+    return out_str
+
+def is_palindrome(str1):
+    str2=reverse(str1)
+    return (str2==str1)
+
+print ("abba", is_palindrome("abba"))
+print ("abab", is_palindrome("abab"))
+print ("tenet",is_palindrome("tenet"))
+print ("banana", is_palindrome("banana"))
+print ("straw warts",is_palindrome("straw warts"))
+print ("a", is_palindrome("a"))
+print ("", is_palindrome("")) 
