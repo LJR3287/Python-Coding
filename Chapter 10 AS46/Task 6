@@ -1,0 +1,19 @@
+# declaring the 'row x col score array' using double list
+
+score=[[[0,0] for col in range(0,20)] for row in range(0,20)]
+
+for i in range (0, 20):   # construct the score table
+    for j in range (0,20):
+        if j>=i:
+            score[i][j]=[j-i,i]
+
+#for i in range (0, 20):  # for debug
+#    print (score[i])
+
+for i in range (0,20):
+    for j in range (0,20):
+        if i+j>0 and score[i][j][0]==0 and score[i][j][1]==0:
+            print("         ", end="")
+        else:
+            print("[%3d,%3d]"%(score[i][j][0]*15, score[i][j][1]*15),end="")
+    print ()    
