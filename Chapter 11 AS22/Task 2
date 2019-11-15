@@ -1,0 +1,7 @@
+import turtle
+
+tess = turtle.Turtle()
+alex = tess
+alex.color("hotpink")
+
+print("This fragment creates one turtle instances and the color of alex will change the color of tess as they are the same now")
