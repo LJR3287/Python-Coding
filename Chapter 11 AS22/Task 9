@@ -1,1 +1,4 @@
-
+song = "The rain in Spain ..."
+print(" ".join(song.split()))
+print("Yes they are the same")
+print("They are only different when the number of spaces in between is different")
