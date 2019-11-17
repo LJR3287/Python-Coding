@@ -1,1 +1,9 @@
+def cross_product(u, v):
+    w = [0]*3
+    w[0] = u[1]*v[2] - u[2]*v[1]
+    w[1] = -u[0]*v[2] + u[2]*v[0]
+    w[2] = +u[0]*v[1] - u[1]*v[0]
+    return(w)
 
+print(cross_product([2,0,0],[2,2,0]))
+print(cross_product([2,3,0],[0,1,2]))
