@@ -1,1 +1,9 @@
+def add_vectors(u, v):
+    w=[0]*len(v)
+    for i in range(len(v)):
+        w[i] = u[i] + v[i]
+    return(w)
 
+print(add_vectors([1, 1], [1, 1]) == [2, 2])
+print(add_vectors([1, 2], [1, 4]) == [2, 6])
+print(add_vectors([1, 2, 1], [1, 4, 3]) == [2, 6, 4])
