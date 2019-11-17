@@ -1,1 +1,4 @@
+print (range(10, 0, -2))
 
+print("If step is positive then the index will increase from start with step increment and stops")
+print("If step is negative then the index will decrease from start with step decrement and stops until index less than end")
