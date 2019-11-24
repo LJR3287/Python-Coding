@@ -1,0 +1,5 @@
+import calendar
+cal = calendar.TextCalendar()
+cal.pryear(2012) 
+
+print("It prints out the calendar for the year 2012")
