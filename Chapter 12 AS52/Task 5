@@ -1,0 +1,2 @@
+print("For namespace_test,it prints out the name of the first 2 modules because the last one is the main program so the other 2 become the module")
+print("Only occurs for the mymodule1.py module ")
