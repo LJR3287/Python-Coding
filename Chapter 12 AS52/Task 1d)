@@ -1,0 +1,3 @@
+import calendar
+d = calendar.LocaleTextCalendar(6, "SPANISH")
+d.pryear(2012)
