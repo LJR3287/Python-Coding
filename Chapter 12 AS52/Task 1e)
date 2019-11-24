@@ -1,0 +1,5 @@
+import calendar
+cal = calendar.TextCalendar()
+print (calendar.isleap(2000))
+
+print("The argument is the year, and the function shows whether or not the year is a leap year or not through true and false")
