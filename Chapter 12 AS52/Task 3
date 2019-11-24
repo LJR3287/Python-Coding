@@ -1,0 +1,1 @@
+print("constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original, a previous exercise where the list contain sublist")
