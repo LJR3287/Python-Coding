@@ -1,0 +1,7 @@
+s = "If we took the bones out, it wouldn't be crunchy, would it?"
+print(s)
+print(s.split())
+print(type(s.split()))
+print(s.split("o"))
+print(s.split("i"))
+print("0".join(s.split("o")))
