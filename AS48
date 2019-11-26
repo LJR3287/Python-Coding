@@ -1,0 +1,3 @@
+def print_all_cars():
+      with conn:
+​          cur = conn.execute("SELECT id, Name, TopSpeed from Cars")
