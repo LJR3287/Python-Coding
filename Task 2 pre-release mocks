@@ -1,5 +1,5 @@
 def SearchMonsterName():
-    monster_found = 0
+    monster_notfound = 1
     SearchName = input("what is the name of the monster you are looking for?")
     with open('Monsters.txt') as f:
         for line in f:
@@ -9,9 +9,9 @@ def SearchMonsterName():
             if SearchName.upper() == monster_name.upper():
                 print("Monster found")
                 print("the id for the name "+SearchName+"is "+id)
-                monster_found=1
+                monster_notfound=0
                 break
-    if monster_found == 0:
+    if monster_notfound == 1:
         print("Monster Not found")
 
 SearchMonsterName()
