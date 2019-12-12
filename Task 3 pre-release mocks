@@ -15,7 +15,6 @@ def validate_number():
     MyNumber=int(MyNumber)
     return MyNumber;
 
-#Create Monster Card
 Name = input("What is the monster's name?")
 Origin = input("Where did the monster come from?")
 Description = input("Describe the monster: ")
@@ -32,7 +31,7 @@ Intelligence = validate_number()
 print("Health")
 Health = validate_number()
 
-#Print Monster Card
+
 print("Monster Card")
 print("\nName: ", Name)
 print("Origin: ",Origin)
