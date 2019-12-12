@@ -1,1 +1,28 @@
 
+print(len("Great Pyramid of Giza"))
+
+print(32)
+
+p = "The" + "Titanic"
+print(p)
+
+#a.) SUBSTR(IDE,1,10)
+#b.) SUBSTR(IDE,12,22)
+#c.) ONECHAR("Integrated Development Environment,"1) & ONECHAR("Integrated Development Environment,"12) & ONECHAR("Integrated Development Environment,"24)
+
+
+
+#(ASC('F')+30)/50
+#ASCII of F = 70
+#Hence, (70+30)/50 = 2
+
+# 2 * (ASC() + ASC('D'))
+# 2 * (   0   + 68) = 136
+
+
+
+#A = "The answer is: "
+
+#B = TOSTRING(42)
+
+#OUTPUT A & B  ->  "The answer is: 42"
