@@ -1,16 +1,18 @@
+import random
+
 class Character:
     def __init__(self):
         self.name =  ""
         self.attack = 0
         self.defence = 0
-        self.health = 0
+        self.__health = 0
         self.experience = 0
 
     def print_basics(self):
         print("Name:       ",self.name)
         print("attack:     ",self.attack)
         print("defence     ",self.defence)
-        print("health:     ",self.health)
+        print("health:     ",self.__health)
         print("experience: ",self.experience)
 
     def print_me(self):
@@ -19,23 +21,52 @@ class Character:
     def print_intro(self):
         print('This is an exciting story')
 
+
 class wizard(Character):
     def __init__(self):
-      Character.__init__(self)
-      self.magic = 0
+        Character.__init__(self) #need to add in parent classes
+        self.magic = 0 #Make this private
+
+    def setter(self,name):
+        self.name =  name
+        self.attack = random.randint(0,50)
+        self.defence = random.randint(0,50)
+        self.__health = random.randint(0,50)
+        self.__magic = 30
+
+    def magic_getter(self):
+        return self.__magic
 
     def print_me(self):
-      self.print_basics()
-      print("magic ",self.magic)
+        self.print_basics()
+        print("magic       ",self.magic)
+
+Jotaro = wizard()
+Jotaro.setter("Jotaro")
+print("magic",Jotaro.magic_getter())
 
 class knight(Character):
     def __init__(self):
-      Character.__init__(self)
-      self.armour = 0
+        Character.__init__(self) #need to add in parent classes
+        self.armour = 0
+
+    def setter(self,name):
+        self.name =  name
+        self.attack = random.randint(0,50)
+        self.defence = random.randint(0,50)
+        self.__health = random.randint(0,50)
+        self.armour = 30
+
+    def health_getter(self):
+        return self.__health
 
     def print_me(self):
-      self.print_basics()
-      print("armour ",self.armour)
+        self.print_basics()
+        print("armour      ",self.armour)
+
+Dio = knight()
+Dio.setter("Dio")
+print("health",Dio.health_getter())
 
 Jotaro = wizard()
 Jotaro.name = "Jotaro"
