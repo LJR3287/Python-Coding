@@ -1,0 +1,64 @@
+class Character:
+    def __init__(self):
+        self.name =  ""
+        self.attack = 0
+        self.defence = 0
+        self.health = 0
+        self.experience = 0
+
+    def print_basics(self):
+        print("Name:       ",self.name)
+        print("attack:     ",self.attack)
+        print("defence     ",self.defence)
+        print("health:     ",self.health)
+        print("experience: ",self.experience)
+
+    def print_me(self):
+        self.print_basics()
+
+    def print_intro(self):
+        print('This is an exciting story')
+
+class wizard(Character):
+    def __init__(self):
+      Character.__init__(self)
+      self.magic = 0
+
+    def print_me(self):
+      self.print_basics()
+      print("magic ",self.magic)
+
+class knight(Character):
+    def __init__(self):
+      Character.__init__(self)
+      self.armour = 0
+
+    def print_me(self):
+      self.print_basics()
+      print("armour ",self.armour)
+
+Jotaro = wizard()
+Jotaro.name = "Jotaro"
+Jotaro.attack = 70
+Jotaro.defence = 50
+Jotaro.experience  = 20
+Jotaro.health = 100
+Jotaro.magic = 200
+
+Jotaro.print_me()
+
+Dio = knight()
+Dio.name = "Dio"
+Dio.attack = 70
+Dio.defence = 51
+Dio.experience = 18
+Dio.health = 90
+Dio.armour = 200
+
+Dio.print_me()
+
+print("Jotaro attacks Dio with magic or as he calls it a stand")
+standattack = Jotaro.magic - Dio.defence
+Dio.health = Dio.health  - standattack
+print("Dio's health has weaken to", Dio.health)
+print("Looks like Jotaro has won this battle")
