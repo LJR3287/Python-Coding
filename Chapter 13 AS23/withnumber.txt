@@ -1,0 +1,83 @@
+0000 def cleanword(s):
+0001     t=""
+0002     for i in range(0,len(s)):
+0003         if s[i].isalpha():
+0004             t=t+s[i]
+0005     return (t)
+0006 
+0007 def has_dashdash(s):
+0008     i=s.find("--")
+0009     if i==-1:
+0010         return False # not found
+0011     else:
+0012         return True  # found
+0013 
+0014 def extract_words(s):
+0015     t=""
+0016     for i in range(0,len(s)): # remove special chars
+0017         if s[i].isalpha():
+0018             t=t+s[i]
+0019         else:
+0020             t=t+" "
+0021     words=t.split()
+0022     return words
+0023 
+0024 def wordcount(w, s):
+0025     n=0
+0026     idx=0
+0027     while idx<len(s):
+0028         i=s[idx].find(w)
+0029         if i!=-1:
+0030             n+=1
+0031         idx=idx+1
+0032     return n
+0033 
+0034 def wordset(s):
+0035     n=0
+0036     idx=0
+0037     wset=[]
+0038     for i in range (0, len(s)):
+0039         found=0
+0040         for j in range (0, idx):
+0041             if s[i]==wset[j]:
+0042                 found+=1
+0043         if found==0:
+0044            wset.append(s[i])
+0045            idx+=1
+0046 #        print (idx, wset)
+0047     return wset
+0048 
+0049 def longestword(s):
+0050     longest=0
+0051     for i in range (0, len(s)):
+0052         if len(s[i]) > longest:
+0053             longest=len(s[i])
+0054 #        print (s[i], longest)
+0055     return longest
+0056 
+0057 print (cleanword("what?"))
+0058 print (cleanword("'now!'"))
+0059 print (cleanword("?+='w-o-r-d!,@$()'"))
+0060 
+0061 print (has_dashdash("distance--but"))
+0062 print (not has_dashdash("several"))
+0063 print (has_dashdash("spoke--"))
+0064 print (has_dashdash("distance--but"))
+0065 print (not has_dashdash("-yo-yo-"))
+0066 
+0067 print(extract_words("Now is the time!  'Now', is the time? Yes, now."))
+0068 print(extract_words("she tried to curtsey as she spoke--fancy"))
+0069 
+0070 print(wordcount("now", ["now","is","time","is","now","is","is"]))
+0071 print(wordcount("is", ["now","is","time","is","now","the","is"]))
+0072 print(wordcount("time", ["now","is","time","is","now","is","is"]))
+0073 print(wordcount("frog", ["now","is","time","is","now","is","is"]))
+0074 
+0075 print(wordset(["now", "is", "time", "is", "now", "is", "is"]))
+0076 print(wordset(["I", "a", "a", "is", "a", "is", "I", "am"]))
+0077 print(wordset(["or", "a", "am", "is", "are", "be", "but", "am"]))
+0078 
+0079 print (longestword(["a", "apple", "pear", "grape"]))
+0080 print (longestword(["a", "am", "I", "be"]))
+0081 print (longestword(["this","supercalifragilisticexpialidocious"]))
+0082 print (longestword([ ]))
