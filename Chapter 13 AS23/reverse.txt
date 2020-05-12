@@ -1,0 +1,83 @@
+print (longestword([ ]))
+print (longestword(["this","supercalifragilisticexpialidocious"]))
+print (longestword(["a", "am", "I", "be"]))
+print (longestword(["a", "apple", "pear", "grape"]))
+
+print(wordset(["or", "a", "am", "is", "are", "be", "but", "am"]))
+print(wordset(["I", "a", "a", "is", "a", "is", "I", "am"]))
+print(wordset(["now", "is", "time", "is", "now", "is", "is"]))
+
+print(wordcount("frog", ["now","is","time","is","now","is","is"]))
+print(wordcount("time", ["now","is","time","is","now","is","is"]))
+print(wordcount("is", ["now","is","time","is","now","the","is"]))
+print(wordcount("now", ["now","is","time","is","now","is","is"]))
+
+print(extract_words("she tried to curtsey as she spoke--fancy"))
+print(extract_words("Now is the time!  'Now', is the time? Yes, now."))
+
+print (not has_dashdash("-yo-yo-"))
+print (has_dashdash("distance--but"))
+print (has_dashdash("spoke--"))
+print (not has_dashdash("several"))
+print (has_dashdash("distance--but"))
+
+print (cleanword("?+='w-o-r-d!,@$()'"))
+print (cleanword("'now!'"))
+print (cleanword("what?"))
+
+    return longest
+#        print (s[i], longest)
+            longest=len(s[i])
+        if len(s[i]) > longest:
+    for i in range (0, len(s)):
+    longest=0
+def longestword(s):
+
+    return wset
+#        print (idx, wset)
+           idx+=1
+           wset.append(s[i])
+        if found==0:
+                found+=1
+            if s[i]==wset[j]:
+        for j in range (0, idx):
+        found=0
+    for i in range (0, len(s)):
+    wset=[]
+    idx=0
+    n=0
+def wordset(s):
+
+    return n
+        idx=idx+1
+            n+=1
+        if i!=-1:
+        i=s[idx].find(w)
+    while idx<len(s):
+    idx=0
+    n=0
+def wordcount(w, s):
+
+    return words
+    words=t.split()
+            t=t+" "
+        else:
+            t=t+s[i]
+        if s[i].isalpha():
+    for i in range(0,len(s)): # remove special chars
+    t=""
+def extract_words(s):
+
+        return True  # found
+    else:
+        return False # not found
+    if i==-1:
+    i=s.find("--")
+def has_dashdash(s):
+
+    return (t)
+            t=t+s[i]
+        if s[i].isalpha():
+    for i in range(0,len(s)):
+    t=""
+def cleanword(s):
