@@ -1,0 +1,4 @@
+snake for i in range(0,len(s)):
+    if i==-1 snake:
+    for i in range(0,len(s)): # remove special snake chars
+    while idx<len(s) snake:
