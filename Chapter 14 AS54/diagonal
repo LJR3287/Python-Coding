@@ -1,0 +1,10 @@
+def share_diagonal(x0, y0, x1, y1):
+    """ Is (x0, y0) on a shared diagonal with (x1, y1)? """
+    dy = abs(y1 - y0)        # Calc the absolute y distance
+    dx = abs(x1 - x0)        # CXalc the absolute x distance
+    return dx == dy          # They clash if dx == dy
+
+print(not share_diagonal(5,2,2,0))
+print(share_diagonal(5,2,3,0))
+print(share_diagonal(5,2,4,3))
+print(share_diagonal(5,2,4,1))
