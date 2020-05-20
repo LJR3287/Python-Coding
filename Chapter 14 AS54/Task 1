@@ -1,31 +1,102 @@
-test(cleanword("what?") == "what")
-test(cleanword("'now!'") == "now")
-test(cleanword("?+='w-o-r-d!,@$()'") ==  "word")
+def find_unknowns_merge_pattern(vocab, wds):
+    """ Both the vocab and wds must be sorted.  Return a new
+        list of words from wds that do not occur in vocab.
+    """
 
-test(has_dashdash("distance--but"))
-test(not has_dashdash("several"))
-test(has_dashdash("spoke--"))
-test(has_dashdash("distance--but"))
-test(not has_dashdash("-yo-yo-"))
+    result = []
+    xi = 0
+    yi = 0
 
-test(extract_words("Now is the time!  'Now', is the time? Yes, now.") ==
-      ['now','is','the','time','now','is','the','time','yes','now'])
-test(extract_words("she tried to curtsey as she spoke--fancy") ==
-      ['she','tried','to','curtsey','as','she','spoke','fancy'])
+    while True:
+        if xi >= len(vocab):
+            result.extend(wds[yi:])
+            return result
 
-test(wordcount("now", ["now","is","time","is","now","is","is"]) == 2)
-test(wordcount("is", ["now","is","time","is","now","the","is"]) == 3)
-test(wordcount("time", ["now","is","time","is","now","is","is"]) == 1)
-test(wordcount("frog", ["now","is","time","is","now","is","is"]) == 0)
+        if yi >= len(wds):
+            return result
 
-test(wordset(["now", "is", "time", "is", "now", "is", "is"]) ==
-      ["is", "now", "time"])
-test(wordset(["I", "a", "a", "is", "a", "is", "I", "am"]) ==
-      ["I", "a", "am", "is"])
-test(wordset(["or", "a", "am", "is", "are", "be", "but", "am"]) ==
-      ["a", "am", "are", "be", "but", "is", "or"])
+        if vocab[xi] == wds[yi]:  # Good, word exists in vocab
+            yi += 1
 
-test(longestword(["a", "apple", "pear", "grape"]) == 5)
-test(longestword(["a", "am", "I", "be"]) == 2)
-test(longestword(["this","supercalifragilisticexpialidocious"]) == 34)
-test(longestword([ ]) == 0)
+        elif vocab[xi] < wds[yi]: # Move past this vocab word,
+            xi += 1
+
+        else:                     # Got word that is not in vocab
+            result.append(wds[yi])
+            yi += 1
+
+def get_words_in_book(filename):
+    """ Read a book from filename, and return a list of its words. """
+    f = open(filename, "r")
+    content = f.read()
+    f.close()
+    wds = text_to_words(content)
+    return wds
+
+def text_to_words(the_text):
+    """ return a list of words with all punctuation removed,
+        and all in lowercase.
+    """
+
+    my_substitutions = the_text.maketrans(
+      # If you find any of these
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&()*+,-./:;<=>?@[]^_`{|}~'\\",
+      # Replace them by these
+      "abcdefghijklmnopqrstuvwxyz                                          ")
+
+    # Translate the text now.
+    cleaned_text = the_text.translate(my_substitutions)
+    wds = cleaned_text.split()
+    return wds
+
+def find_unknowns_merge_pattern(vocab, wds):
+    """ Both the vocab and wds must be sorted.  Return a new
+        list of words from wds that do not occur in vocab.
+    """
+
+    result = []
+    xi = 0
+    yi = 0
+
+    while True:
+        if xi >= len(vocab):
+            result.extend(wds[yi:])
+            return result
+
+        if yi >= len(wds):
+            return result
+
+        if vocab[xi] == wds[yi]:  # Good, word exists in vocab
+            yi += 1
+
+        elif vocab[xi] < wds[yi]: # Move past this vocab word,
+            xi += 1
+
+        else:                     # Got word that is not in vocab
+            result.append(wds[yi])
+            yi += 1
+
+def remove_adjacent_dups(xs):
+    """ Return a new list in which all adjacent
+        duplicates from xs have been removed.
+    """
+    result = []
+    most_recent_elem = None
+    for e in xs:
+        if e != most_recent_elem:
+            result.append(e)
+            most_recent_elem = e
+
+    return result  
+            
+all_words = get_words_in_book("alice.txt")
+all_words.sort()
+
+#t0 = time.clock()
+
+book_words = remove_adjacent_dups(all_words)
+missing_words = find_unknowns_merge_pattern(all_words, book_words)
+print (missing_words)
+#t1 = time.clock()
+#print("There are {0} unknown words.".format(len(missing_words)))
+#print("That took {0:.4f} seconds.".format(t1-t0))
