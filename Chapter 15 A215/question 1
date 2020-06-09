@@ -1,0 +1,8 @@
+import math
+class point:
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+
+def distance(P1,P2):
+    return math.sqrt( (P2.x-P1.x)**2 + (P2.y-P1.y)**2 )
